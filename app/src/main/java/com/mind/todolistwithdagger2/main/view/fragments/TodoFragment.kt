@@ -5,9 +5,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import com.mind.todolistwithdagger2.R
+import com.mind.todolistwithdagger2.main.viewmodel.TaskViewModel
 import kotlinx.android.synthetic.main.fragment_todo.*
 
 
@@ -27,7 +29,7 @@ private lateinit var navController: NavController
         super.onViewCreated(view, savedInstanceState)
         navController = view.findNavController()
         initView()
-
+        ViewModelProvider(this).get(TaskViewModel::class.java)
     }
 
     private fun initView() {
