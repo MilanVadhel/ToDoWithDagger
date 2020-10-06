@@ -22,5 +22,10 @@
         android:id="@+id/addTodoFragment"
         android:name="com.mind.todolistwithdagger2.main.view.fragments.AddTodoFragment"
         android:label="fragment_addtodo"
-        tools:layout="@layout/fragment_addtodo" />
+        tools:layout="@layout/fragment_addtodo" >
+        <action
+            android:id="@+id/action_addTodoFragment_to_todoFragment"
+            app:destination="@id/todoFragment"
+            app:popUpTo="@id/todoFragment" />
+    </fragment>
 </navigation>

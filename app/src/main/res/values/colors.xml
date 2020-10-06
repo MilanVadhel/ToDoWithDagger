@@ -9,4 +9,6 @@
     <color name="lightred">#AFF44336</color>
     <color name="darkred">#FF1100</color>
     <color name="black">#000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="gray">#6D7B5D</color>
 </resources>

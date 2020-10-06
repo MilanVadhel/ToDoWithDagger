@@ -1,4 +1,4 @@
-package com.mind.todolistwithdagger2.main.di.presenter
+package com.mind.todolistwithdagger2.main.di.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider

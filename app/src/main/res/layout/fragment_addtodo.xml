@@ -7,6 +7,86 @@
     tools:context=".main.view.fragments.AddTodoFragment">
 
 
+    <TextView
+        android:id="@+id/txtAddTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_your_task"
+        android:textSize="@dimen/sp_25"
+        android:textColor="@color/lightgreen"
+        android:textFontWeight="5"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@id/left"
+        app:layout_constraintEnd_toEndOf="@id/right"
+        android:layout_marginTop="@dimen/dp_40"
+        />
+
+
+    <EditText
+        android:id="@+id/edtTitle"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/left"
+        app:layout_constraintEnd_toEndOf="@id/right"
+        app:layout_constraintTop_toBottomOf="@id/txtAddTitle"
+        android:layout_marginTop="@dimen/dp_80"
+        android:hint="@string/title"
+        style="@style/EditTextStyle"
+        />
+
+    <EditText
+        android:id="@+id/edtDescription"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/left"
+        app:layout_constraintEnd_toEndOf="@id/right"
+        app:layout_constraintTop_toBottomOf="@id/edtTitle"
+        android:layout_marginTop="@dimen/dp_20"
+        android:hint="@string/Description"
+        style="@style/EditTextStyle"
+        />
+
+    <Spinner
+        android:id="@+id/spinnerCategory"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_50"
+        app:layout_constraintTop_toBottomOf="@id/edtDescription"
+        app:layout_constraintStart_toStartOf="@id/left"
+        app:layout_constraintEnd_toEndOf="@id/right"
+        android:layout_marginTop="@dimen/dp_20"
+        />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_50"
+        app:layout_constraintStart_toStartOf="@id/left"
+        app:layout_constraintEnd_toEndOf="@id/right"
+        app:layout_constraintTop_toBottomOf="@id/spinnerCategory"
+        android:layout_marginTop="@dimen/dp_50"
+        android:text="@string/save"
+        android:background="@color/lightgreen"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_20"/>
+
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="@dimen/dp_20"
+        android:orientation="vertical"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_end="@dimen/dp_20"
+        android:orientation="vertical"
+        />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

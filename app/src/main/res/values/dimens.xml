@@ -10,4 +10,7 @@
     <dimen name="sp_22">22sp</dimen>
     <dimen name="sp_15">15sp</dimen>
     <dimen name="sp_10">10sp</dimen>
+    <dimen name="dp_20">20dp</dimen>
+    <dimen name="dp_1">1dp</dimen>
+    <dimen name="dp_80">80dp</dimen>
 </resources>

@@ -14,5 +14,7 @@ class Task(
 ){
     @PrimaryKey(autoGenerate = true)
     var id : Int  = 0
+
+    //archived flag  0 = "to do" and 1 = archived
     var flag : Int = 0
 }
