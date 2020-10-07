@@ -25,4 +25,8 @@ class TaskViewModel @Inject constructor(private val taskRepository: TaskReposito
     fun addToArchive(archivedTaskId: Int) {
         taskRepository.addToArchive(archivedTaskId)
     }
+
+    fun moveToToDo(archivedTaskId: Int) {
+            taskRepository.moveToToDo(archivedTaskId)
+    }
 }

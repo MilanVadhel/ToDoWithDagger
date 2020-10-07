@@ -5,7 +5,7 @@ import androidx.room.RoomDatabase
 import com.mind.todolistwithdagger2.main.database.dao.TaskDao
 import com.mind.todolistwithdagger2.main.database.entity.Task
 
-@Database(entities = [Task::class], version = 1, exportSchema = false)
+@Database(entities = [Task::class], version = 2, exportSchema = false)
 abstract class ToDoRoom : RoomDatabase() {
     abstract fun getTaskDao() : TaskDao
 }

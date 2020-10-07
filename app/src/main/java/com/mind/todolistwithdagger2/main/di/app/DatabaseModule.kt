@@ -21,7 +21,7 @@ class DatabaseModule(private val application: Application) {
         return Room.databaseBuilder(application, ToDoRoom::class.java, "todo")
             .allowMainThreadQueries().setJournalMode(
                 RoomDatabase.JournalMode.TRUNCATE
-            ).build()
+            ).fallbackToDestructiveMigration().build()
     }
 
 

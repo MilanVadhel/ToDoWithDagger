@@ -8,4 +8,5 @@ interface TaskRepository {
     fun getTask() : List<Task>
     fun addToArchive(archivedTaskId: Int)
     fun getArchivedTask(): List<Task>
+    fun moveToToDo(archivedTaskId: Int)
 }

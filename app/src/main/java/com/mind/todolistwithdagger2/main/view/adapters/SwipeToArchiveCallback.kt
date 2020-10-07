@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.RecyclerView
 
 
-abstract class SwipeToArchiveCallback(val context: Context) : ItemTouchHelper.Callback() {
+abstract class SwipeToArchiveCallback(val context: Context,val direction:Int) : ItemTouchHelper.Callback() {
 
     var mContext: Context? = null
     private var mClearPaint: Paint? = null
@@ -24,7 +24,7 @@ abstract class SwipeToArchiveCallback(val context: Context) : ItemTouchHelper.Ca
     init {
         mContext = context
         mBackground = ColorDrawable()
-        backgroundColor = Color.parseColor("#b80f0a")
+        backgroundColor = Color.parseColor("#4CAF50")
         mClearPaint = Paint()
         mClearPaint!!.xfermode = PorterDuffXfermode(PorterDuff.Mode.CLEAR)
         archiveDrawable = ContextCompat.getDrawable(mContext!!, R.drawable.ic_delete)
@@ -37,7 +37,9 @@ abstract class SwipeToArchiveCallback(val context: Context) : ItemTouchHelper.Ca
         recyclerView: RecyclerView,
         viewHolder: RecyclerView.ViewHolder
     ): Int {
-        return makeMovementFlags(0, ItemTouchHelper.RIGHT)
+        //Left = 4
+        //Right = 8
+        return makeMovementFlags(0, direction)
     }
 
     //for drag and drop

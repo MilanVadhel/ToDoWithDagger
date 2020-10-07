@@ -17,4 +17,6 @@ class Task(
 
     //archived flag  0 = "to do" and 1 = archived
     var flag : Int = 0
+
+    var isExpanded = false
 }

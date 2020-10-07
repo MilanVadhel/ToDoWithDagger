@@ -21,4 +21,8 @@ class TaskRepositoryImpl(val taskDao: TaskDao) : TaskRepository {
     override fun getArchivedTask(): List<Task> {
         return taskDao.getArchivedTasks()
     }
+
+    override fun moveToToDo(archivedTaskId: Int) {
+        taskDao.moveToToDo(archivedTaskId)
+    }
 }

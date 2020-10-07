@@ -78,18 +78,20 @@ class TodoFragment : BaseViewModelFragment<TaskViewModel>(), View.OnClickListene
 
 
     private fun enableSwipeToArchive() {
-        val swipeToArchiveCallback : SwipeToArchiveCallback = object : SwipeToArchiveCallback(requireContext()) {
+        //taskAdapter.getData()
+        val swipeToArchiveCallback : SwipeToArchiveCallback = object : SwipeToArchiveCallback(requireContext(),8) {
             override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
                 super.onSwiped(viewHolder, direction)
                 val position=viewHolder.adapterPosition
-                taskAdapter.addToArchive(position)
                 val archivedTaskId = taskAdapter.getData()[position].id
+                taskAdapter.removeItem(position)
                 moveToArchive(archivedTaskId)
             }
         }
         val itemTouchHelper = ItemTouchHelper(swipeToArchiveCallback)
         itemTouchHelper.attachToRecyclerView(toDoRecyclerview)
     }
+
     private fun moveToArchive(archivedTaskId: Int) {
         viewModel.addToArchive(archivedTaskId)
     }
